@@ -10,7 +10,7 @@ def ingest_data(filepath: str) -> pd.DataFrame:
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     # suppression des lignes avec des valeurs manquantes
-    df = df[['survuved', 'pclass', 'sex', 'age']]
+    df = df[['survived', 'pclass', 'sex', 'age']]
     df.dropna(inplace=True)
 
     # remplacer les valeurs non numériques par des valeurs numériques
