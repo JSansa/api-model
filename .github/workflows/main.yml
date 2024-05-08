@@ -22,7 +22,7 @@ jobs:
       run: pytest
 
     - name: Train and evaluate model
-      run: python train.py
+      run: python train/train.py
     
       
     
