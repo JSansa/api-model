@@ -37,4 +37,4 @@ jobs:
           logout: true
 
       - name: Push Docker image
-        run: docker push hdakhli/api-titanic:${{ steps.meta.outputs.tag }}
+        run: docker push hdakhli/api-titanic:latest
