@@ -28,7 +28,7 @@ jobs:
 #        run: docker build -t hdakhli/api-titanic .
 
       - name: Login to DockerHub
-        uses: docker/login-action@v3.0.0
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.USER }}
           password: ${{ secrets.TOKEN }}
