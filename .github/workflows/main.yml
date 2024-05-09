@@ -5,6 +5,8 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: docker
 
     steps:
       - name: Checkout repository
