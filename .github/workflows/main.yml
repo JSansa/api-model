@@ -34,17 +34,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           logout: true
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
-        with:
-          images: hdakhli/api-titanic
-
-      - name: Push to Docker Hub
-        uses: docker/build-push-action@v2
-        with:
-          push: true
-          tags: hdakhli/api-titanic:latest
-
-      - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+      - name: Push Docker image
+        run: docker push hdakhli/api-titanic:${{ steps.meta.outputs.tag }}
